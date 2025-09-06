@@ -1,0 +1,85 @@
+---
+import Icon  from 'astro-icon';
+const {props} = Astro
+
+const socials = [
+  { icon: "fa-brands fa-facebook", url: "https://facebook.com" },
+  { icon: "fa-brands fa-twitter", url: "https://twitter.com" },
+  { icon: "fa-brands fa-instagram", url: "https://instagram.com" },
+  { icon: "fa-brands fa-linkedin", url: "https://linkedin.com" },
+  { icon: "fa-brands fa-youtube", url: "https://youtube.com" },
+  { icon: "fa-brands fa-github", url: "https://github.com" },
+];
+---
+
+<section class="w-full bg-white px-6 md:px-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    
+    <!-- Partners Card -->
+    <div class="border rounded-lg shadow-sm bg-white">
+      <!-- Header -->
+      <div class="flex items-center gap-3 border-b px-4 py-3">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100">
+          <img src="partners.png" alt=""/>
+        </div>
+        <h2 class="text-2xl font-light">Partners</h2>
+      </div>
+
+      <!-- Logos -->
+      <div class="grid grid-cols-2 gap-6 p-6 place-items-center">
+        <img src="https://iitb-aicte-mapathon.fossee.in/static/cms/uploads/images/rudra-logo.png" alt="RUDRA Logo" class="max-h-16 object-contain" />
+        <img src="logo.svg" alt="IIT Tirupati Logo" class="max-h-16 object-contain" />
+        <img src="navavishkaar.png" alt="Navavishkar Logo" class="max-h-20 object-contain col-span-2" />
+      </div>
+    </div>
+
+    <!-- Follow Us Section -->
+   <div class="flex flex-col items-center md:items-start gap-4 w-full md:w-1/2">
+    <h2 class="text-2xl font-semibold">Follow us on</h2>
+     <div class="flex gap-4">
+      <!-- Facebook -->
+      <a href="https://facebook.com" target="_blank" class="w-12 h-12 rounded-full bg-[#1877F2] flex items-center justify-center hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/>
+        </svg>
+      </a>
+
+      <!-- Twitter -->
+      <a href="https://twitter.com" target="_blank" class="w-12 h-12 rounded-full bg-[#1DA1F2] flex items-center justify-center hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.27 4.27 0 0 0 1.88-2.37 8.6 8.6 0 0 1-2.72 1.04A4.25 4.25 0 0 0 16 4a4.25 4.25 0 0 0-4.15 5.22 12.06 12.06 0 0 1-8.75-4.43 4.25 4.25 0 0 0 1.32 5.67c-.66-.02-1.28-.2-1.82-.5v.05a4.26 4.26 0 0 0 3.41 4.17 4.22 4.22 0 0 1-1.92.07 4.26 4.26 0 0 0 3.98 2.96A8.53 8.53 0 0 1 2 19.54a12.05 12.05 0 0 0 6.52 1.91c7.83 0 12.12-6.49 12.12-12.12 0-.18-.01-.36-.02-.54A8.63 8.63 0 0 0 22.46 6z"/>
+        </svg>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.7A3 3 0 1 1 15 12a3 3 0 0 1-3 3zm4.8-8.9a1.1 1.1 0 1 0 1.1 1.1c0-.61-.49-1.1-1.1-1.1z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com" target="_blank" class="w-12 h-12 rounded-full bg-[#0077B5] flex items-center justify-center hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14M8.3 17v-7H5.8v7h2.5M7 8.6c.8 0 1.3-.5 1.3-1.2S7.8 6.2 7 6.2c-.8 0-1.3.5-1.3 1.2S6.2 8.6 7 8.6m10 8.4v-3.6c0-1.9-1-2.7-2.3-2.7-1.1 0-1.6.6-1.9 1.1v-.9H10v7h2.5v-3.5c0-.2 0-.4.1-.6.2-.4.6-.9 1.2-.9.9 0 1.3.7 1.3 1.7V17H17z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com" target="_blank" class="w-12 h-12 rounded-full bg-[#FF0000] flex items-center justify-center hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.6 3.2H4.4A1.6 1.6 0 0 0 2.8 4.8v14.4a1.6 1.6 0 0 0 1.6 1.6h15.2a1.6 1.6 0 0 0 1.6-1.6V4.8a1.6 1.6 0 0 0-1.6-1.6zm-9.2 14V6.8l6.4 5.2-6.4 5.2z"/>
+        </svg>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com" target="_blank" class="w-12 h-12 rounded-full bg-[#333] flex items-center justify-center hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56v-2.01c-3.2.69-3.87-1.54-3.87-1.54-.53-1.33-1.3-1.69-1.3-1.69-1.06-.72.08-.71.08-.71 1.18.09 1.8 1.22 1.8 1.22 1.04 1.78 2.74 1.27 3.41.97.11-.76.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.19a11.1 11.1 0 0 1 5.8 0c2.21-1.5 3.18-1.19 3.18-1.19.63 1.57.23 2.73.11 3.02.74.81 1.19 1.85 1.19 3.11 0 4.43-2.71 5.4-5.29 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.21.68.8.56A10.5 10.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  icon: string;
+  content?: string;
+  title: string;
+  button?: string;
+  link?: string;
+}
+
+const { icon,title, content, button,link } = Astro.props;
+---
+
+ <div class="min-h-1  bg-white justify-between">
+        <!-- Header -->
+ <div class="border rounded-lg shadow-sm p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl">{icon}</span>
+          <h2 class="text-xl font-semibold">{title}</h2>
+        </div>
+        <!-- Button -->
+        {button && (
+          <a 
+            href={link || "#"}
+            class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
+            {button}
+          </a></div>
+        )}
+      </div>

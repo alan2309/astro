@@ -1,0 +1,55 @@
+---
+---
+
+<nav class="w-full bg-white shadow-md px-4 py-3 flex items-center justify-between">
+  <!-- Left logo -->
+  <div class="flex items-center">
+    <img src="https://gis.fossee.in/static/cms/uploads/images/site-logo.png" 
+         alt="Site Logo" class="h-12 w-auto" />
+  </div>
+
+  <!-- Navigation links (center) -->
+  <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
+    <a href="/" class="hover:text-blue-600 transition">Home</a>
+    <a href="/downloads" class="hover:text-blue-600 transition">Downloads</a>
+    <a href="/resources" class="hover:text-blue-600 transition">Resources</a>
+    <a href="/forum" class="hover:text-blue-600 transition">Forum</a>
+    <a href="/about" class="hover:text-blue-600 transition">About Us</a>
+    <a href="/contact" class="hover:text-blue-600 transition">Contact Us</a>
+  </div>
+
+  <!-- Right logos -->
+  <div class="flex items-center gap-4">
+  <img src="https://gis.fossee.in/static/cms/uploads/images/iitb-logo.png" 
+       alt="IITB Logo" class="h-10 md:h-12 w-auto" />
+  <img src="https://gis.fossee.in/static/cms/uploads/images/fossee-logo.png" 
+       alt="FOSSEE Logo" class="h-10 md:h-12 w-auto" />
+</div>
+
+
+  <!-- Mobile menu button -->
+  <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+    ☰
+  </button>
+</nav>
+
+<!-- Mobile dropdown -->
+<div id="mobile-menu" class="hidden flex-col bg-white shadow-md px-6 py-4 space-y-4 md:hidden">
+  <a href="/" class="block text-gray-800 hover:text-blue-600">Home</a>
+  <a href="/downloads" class="block text-gray-800 hover:text-blue-600">Downloads</a>
+  <a href="/resources" class="block text-gray-800 hover:text-blue-600">Resources</a>
+  <a href="/forum" class="block text-gray-800 hover:text-blue-600">Forum</a>
+  <a href="/about" class="block text-gray-800 hover:text-blue-600">About Us</a>
+  <a href="/contact" class="block text-gray-800 hover:text-blue-600">Contact Us</a>
+</div>
+
+<script is:inline>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn?.addEventListener("click", () => {
+    if (mobileMenu) {
+      mobileMenu.classList.toggle("hidden");
+    }
+  });
+</script>

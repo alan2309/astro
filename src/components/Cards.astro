@@ -1,0 +1,44 @@
+---
+import CardMain from "./CardMain.astro";
+import CardSmall from "./CardSmall.astro";
+
+const cards = [
+  {
+    title: "Announcement",
+    content: "The FOSSEE-GIS website is currently being upgraded. IIT Bombay FOSSEE GIS (NMEICT) Activities Calendar 2025 is out!!!",
+    link: "https://www.iitb.ac.in/iit-bombay-fossee-gis-activities-calendar-year-2025",
+    button: "Click to view full schedule",
+    icon: "📢",
+    wide: true
+  },
+  { title: "Mapathon", button: "Know More", icon: "🌍", link: "#",wide: false },
+  { title: "Case Study", button: "Know More", icon: "📘", link: "#",wide: false },
+  { title: "Testimonials", content: "TBD", icon: "💬" ,wide: false},
+  { title: "Statistics", content: "TBD", icon: "📊" ,wide: false},
+  { title: "Internship", button: "Know More", icon: "🎓", link: "#",wide: false },
+  { title: "Winter School", button: "Know More", icon: "❄️", link: "#" },
+];
+---
+
+<section class="w-full py-12 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+  <div class="">
+<CardMain {...cards[0]} />
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+  <CardSmall {...cards[1]} />
+    <CardSmall {...cards[2]} />
+  </div>
+  </div>
+
+  <div class="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+<CardMain {...cards[3]} />
+<CardMain {...cards[4]} />
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+  <CardSmall {...cards[5]} />
+    <CardSmall {...cards[6]} />
+  </div>
+  </div>
+</section>
