@@ -1,29 +1,35 @@
+---
+import Footer2 from "../Footer2.astro"
+---
+
 <footer class="bg-white mt-10">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
     
     <!-- Poster -->
     <div class="flex flex-col items-center md:items-start gap-4">
-      <h2 class="text-3xl font-light">Poster</h2>
+      <h2 class="text-3xl font-medium">Poster</h2>
+      <a href="https://fossee.in/data/Poster.pdf" target="_blank">
       <img 
         src="Poster_Thumbnail.png" 
         alt="FOSSEE Poster" 
-        class="w-64 md:w-72 shadow-md border"
-      />
+        class="w-64 md:w-72 rounded-lg shadow-md border"
+      /></a>
     </div>
 
     <!-- Brochure -->
     <div class="flex flex-col items-center md:items-start gap-4">
-      <h2 class="text-3xl font-light">Brochure</h2>
+      <h2 class="text-3xl font-medium">Brochure</h2>
+      <a href="https://fossee.in/data/Flier.pdf" target="_blank">
       <img 
         src="Fossee_Flyer_Thumbnail.png" 
         alt="FOSSEE Brochure" 
-        class="w-64 md:w-72 shadow-md border"
-      />
+        class="w-64 md:w-72 rounded-lg shadow-md border"
+      /></a>
     </div>
 
     <!-- Contact Info -->
     <div class="flex flex-col gap-4">
-      <h2 class="text-3xl font-light">CONTACT</h2>
+      <h2 class="text-3xl font-medium">CONTACT</h2>
       <ul class="space-y-4 text-gray-800 text-lg">
         <li class="flex items-center gap-3">
           <!-- Home Icon -->
@@ -49,21 +55,18 @@
     </div>
 
     <!-- Ministry Logos -->
-    <div class="flex flex-col gap-4 items-center md:items-start">
-      <h2 class="text-lg font-bold">Ministry of Education</h2>
-      <p class="text-sm text-gray-700">Govt. of India</p>
-      <img src="https://iitb-aicte-mapathon.fossee.in/static/cms/uploads/images/iitb-logo.png" alt="IIT Bombay" class="h-12" />
-      <img src="nmeict-logo.png" alt="NMEICT" class="h-14" />
-    </div>
+    <div class="flex flex-col gap-4 items-center text-center">
+  <h2 class="text-lg font-bold">Ministry of Education</h2>
+  <div class="text-sm text-gray-800 font-medium">Govt. of India</div>
+  <a href="https://www.iitb.ac.in" target="_blank">
+  <img src="https://iitb-aicte-mapathon.fossee.in/static/cms/uploads/images/iitb-logo.png" 
+       alt="IIT Bombay" class="h-22" /></a>
+  <a href="https://mhrd.gov.in/ict-initiatives" target="_blank"> 
+  <img src="nmeict-logo.png" alt="NMEICT" class="h-30" /></a>
+</div>
+
 
   </div>
-  <!-- License Bar -->
-  <div class="mt-4 bg-black py-15 px-6">
-    <div class="max-w-7xl mx-auto flex items-center gap-4">
-      <img src="https://hackathon.fossee.org/static/cms/uploads/images/88x31.png" alt="Creative Commons" class="h-8" />
-      <p class="text-white text-sm">
-        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-      </p>
-    </div>
-  </div>
-</footer>
+  <Footer2/>
+  </footer>
+ 

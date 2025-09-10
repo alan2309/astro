@@ -1,0 +1,23 @@
+---
+import Navbar from "../../components/Header.astro";
+import "../../styles/global.css";
+import Footer2 from "../../components/Footer2.astro";
+import Update from "../../components/Update.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOSSEE GIS 2025</title>
+  </head>
+  <body class="font-sans">
+	<Update/>
+    <Navbar />
+    <div class="h-[48vh]">
+      <p class="text-sm px-10 pt-10 pb-5 underline">Please address your queries/suggestions to:</p>
+      <p class="px-10 text-sm text-gray-600">IIT Bombay FOSSEE GIS (NMEICT): An initiative of the National Mission on Education through ICT, Ministry of Education, Government of India</p>
+    </div>
+    <Footer2/>
+  </body>
+</html>

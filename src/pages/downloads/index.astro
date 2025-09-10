@@ -1,0 +1,53 @@
+---
+import Navbar from "../../components/Header.astro";
+import "../../styles/global.css";
+import Footer2 from "../../components/Footer2.astro";
+import Update from "../../components/Update.astro";
+const resources = [
+  {
+    label: "Download QGIS stable version",
+    url: "https://qgis.org/downloads/QGIS-OSGeo4W-3.4.13-1-Setup-x86_64.exe",
+  },
+  {
+    label: "Download latest version",
+    url: "https://qgis.org/downloads/QGIS-OSGeo4W-3.10.0-1-Setup-x86_64.exe",
+  },
+  {
+    label: "User Guide/Manual",
+    url: "https://docs.qgis.org/2.18/pdf/en/QGIS-2.18-UserGuide-en.pdf",
+  },
+  {
+    label: "Spoken Tutorials",
+    url: "https://spoken-tutorial.org/tutorial-search/?search_foss=QGIS&search_language=English",
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOSSEE GIS 2025</title>
+  </head>
+  <body class="font-sans">
+	<Update/>
+    <Navbar />
+    <div class="py-24 px-10 h-full">
+  <div class="space-y-3">
+    {resources.map((item) => (
+      <p class="text-gray-800 text-[15px]">
+        {item.label}{" "}
+        <a 
+          href={item.url} 
+          target="_blank" 
+          class="text-blue-600 hover:underline"
+        >
+          {item.url}
+        </a>
+      </p>
+    ))}
+  </div>
+</div>
+    <Footer2/>
+  </body>
+</html>

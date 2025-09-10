@@ -1,0 +1,67 @@
+---
+import Navbar from "../../components/Header.astro";
+import "../../styles/global.css";
+import Footer2 from "../../components/Footer2.astro";
+import Update from "../../components/Update.astro";
+import FileExplorer from "../../components/FileExplorer.astro";
+
+const resources = [
+  {
+    label: "Introduction to GIS",
+    url: "https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/",
+  },
+  {
+    label: "QGIS Website",
+    url: "https://qgis.org/en/site/",
+  },
+  {
+    label: "Download QGIS stable version",
+    url: "https://qgis.org/downloads/QGIS-OSGeo4W-3.4.13-1-Setup-x86_64.exe",
+  },
+  {
+    label: "Download latest version",
+    url: "https://qgis.org/downloads/QGIS-OSGeo4W-3.10.0-1-Setup-x86_64.exe",
+  },
+  {
+    label: "Download and Installation of QGIS version 2.18",
+    url: "https://spoken-tutorial.org/watch/QGIS/Installation+of+QGIS/English/",
+  },
+  {
+    label: "User Guide/Manual",
+    url: "https://docs.qgis.org/2.18/pdf/en/QGIS-2.18-UserGuide-en.pdf",
+  },
+  {
+    label: "Spoken Tutorials",
+    url: "https://spoken-tutorial.org/tutorial-search/?search_foss=QGIS&search_language=English",
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOSSEE GIS 2025</title>
+  </head>
+  <body class="font-sans">
+	<Update/>
+    <Navbar />
+      <FileExplorer/>
+      
+      <div class="bg-white p-4 w-fit space-y-2 mt-5">
+  {resources.map((item) => (
+    <p class="text-gray-800 text-[15px] font-light pl-10 pb-2">
+      {item.label}:{" "}
+      <a 
+        href={item.url} 
+        target="_blank" 
+        class="text-blue-600 hover:underline"
+      >
+        {item.url}
+      </a>
+    </p>
+  ))}
+</div>
+    <Footer2/>
+  </body>
+</html>

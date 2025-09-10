@@ -1,46 +1,43 @@
----
----
-
-<nav class="w-full bg-white shadow-md px-4 py-3 flex items-center justify-between">
+<nav class="w-full bg-white border-3 border-black px-6 py-2 flex items-center justify-between">
   <!-- Left logo -->
   <div class="flex items-center">
+     <a href="/">
     <img src="https://gis.fossee.in/static/cms/uploads/images/site-logo.png" 
-         alt="Site Logo" class="h-12 w-auto" />
+         alt="Site Logo" class="h-12 md:h-17 lg:h-22 w-auto" /></a>
   </div>
 
   <!-- Navigation links (center) -->
-  <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
+  <div class="hidden md:flex items-center gap-8 text-2xl font-bold text-black">
     <a href="/" class="hover:text-blue-600 transition">Home</a>
     <a href="/downloads" class="hover:text-blue-600 transition">Downloads</a>
     <a href="/resources" class="hover:text-blue-600 transition">Resources</a>
     <a href="/forum" class="hover:text-blue-600 transition">Forum</a>
-    <a href="/about" class="hover:text-blue-600 transition">About Us</a>
-    <a href="/contact" class="hover:text-blue-600 transition">Contact Us</a>
+    <a href="/about-us" class="hover:text-blue-600 transition">About Us</a>
+    <a href="/contact-us" class="hover:text-blue-600 transition">Contact Us</a>
   </div>
 
   <!-- Right logos -->
-  <div class="flex items-center gap-4">
-  <img src="https://gis.fossee.in/static/cms/uploads/images/iitb-logo.png" 
-       alt="IITB Logo" class="h-10 md:h-12 w-auto" />
-  <img src="https://gis.fossee.in/static/cms/uploads/images/fossee-logo.png" 
-       alt="FOSSEE Logo" class="h-10 md:h-12 w-auto" />
-</div>
-
+  <div class="flex items-center gap-2 md:gap-4 lg:gap-6 ">
+    <img src="https://gis.fossee.in/static/cms/uploads/images/iitb-logo.png" 
+         alt="IITB Logo" class="h-11 md:h-12 lg:h-16 w-auto" />
+    <img src="https://gis.fossee.in/static/cms/uploads/images/fossee-logo.png" 
+         alt="FOSSEE Logo" class="h-10 md:h-12 lg:h-16 w-auto" />
+  </div>
 
   <!-- Mobile menu button -->
-  <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+  <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl ml-auto">
     ☰
   </button>
 </nav>
 
 <!-- Mobile dropdown -->
-<div id="mobile-menu" class="hidden flex-col bg-white shadow-md px-6 py-4 space-y-4 md:hidden">
-  <a href="/" class="block text-gray-800 hover:text-blue-600">Home</a>
-  <a href="/downloads" class="block text-gray-800 hover:text-blue-600">Downloads</a>
-  <a href="/resources" class="block text-gray-800 hover:text-blue-600">Resources</a>
-  <a href="/forum" class="block text-gray-800 hover:text-blue-600">Forum</a>
-  <a href="/about" class="block text-gray-800 hover:text-blue-600">About Us</a>
-  <a href="/contact" class="block text-gray-800 hover:text-blue-600">Contact Us</a>
+<div id="mobile-menu" class="hidden flex-col bg-white border border-black px-6 py-4 space-y-4 md:hidden">
+  <a href="/" class="block text-black hover:text-blue-600">Home</a>
+  <a href="/downloads" class="block text-black hover:text-blue-600">Downloads</a>
+  <a href="/resources" class="block text-black hover:text-blue-600">Resources</a>
+  <a href="/forum" class="block text-black hover:text-blue-600">Forum</a>
+  <a href="/about" class="block text-black hover:text-blue-600">About Us</a>
+  <a href="/contact" class="block text-black hover:text-blue-600">Contact Us</a>
 </div>
 
 <script is:inline>

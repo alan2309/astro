@@ -1,0 +1,63 @@
+---
+interface Props {
+  icon?: string;
+  content?: string;
+  title: string;
+  button?: string;
+  wide?: boolean;
+  link?: string;
+  route?: string;
+}
+
+const { icon, title, content, button, wide, link,route } = Astro.props;
+---
+
+<div
+  class={`border border-gray-300 rounded-lg bg-white flex flex-col justify-between ${
+    wide ? "md:col-span-2 lg:col-span-1" : ""
+  }`}
+>
+  <!-- Header -->
+ <div class="border-b border-gray-300 p-4 bg-gray-100 rounded-t-lg">
+  <div class="flex items-center gap-3">
+    {icon ? <img class="h-10 " src={icon} alt="icon" /> : null}
+    <h2 class="text-2xl font-semibold text-black">{title}</h2>
+  </div>
+</div>
+
+
+  <!-- Body -->
+  <div class="p-6">
+    {content && (
+      <p
+        class={`text-gray-800 font-semibold text-sm leading-relaxed mb-4 ${
+          wide ? "text-center" : ""
+        }`}
+      >
+        {content}{" "}
+        {link && (
+          <a
+            href={link}
+            class="font-semibold text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {link}
+          </a>
+        )}
+      </p>
+    )}
+
+    <!-- Button -->
+    {button && (
+      <a
+        href={route || "#"}
+        target="_blank" 
+  rel="noopener noreferrer"
+        class="inline-block mt-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 transition"
+      >
+        {button}
+      </a>
+    )}
+  </div>
+</div>
