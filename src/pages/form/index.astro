@@ -1,0 +1,306 @@
+---
+import "../../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Application Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto px-4 py-8 max-w-4xl">
+    <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">
+      Internship Application Form
+    </h1>
+
+    <form id="internshipForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <!-- Personal Information Section -->
+            <h2 class="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">Personal Information</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
+                        First Name <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="firstName" name="firstName" type="text" placeholder="First Name" required>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+                        Last Name <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="lastName" name="lastName" type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Email <span class="text-red-500">*</span>
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" name="email" type="email" placeholder="Email" required>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="contactNumber">
+                    Contact Number (10 digits only) <span class="text-red-500">*</span>
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="contactNumber" name="contactNumber" type="tel" pattern="[0-9]{10}" placeholder="10-digit Contact Number" required>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Gender
+                </label>
+                <div class="flex space-x-4">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="gender" value="Male" class="form-radio text-blue-600">
+                        <span class="ml-2">Male</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="gender" value="Female" class="form-radio text-blue-600">
+                        <span class="ml-2">Female</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="gender" value="Other" class="form-radio text-blue-600">
+                        <span class="ml-2">Other</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Professional Information Section -->
+            <h2 class="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">Professional Information</h2>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="iAmA">
+                    I Am A? <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="iAmA" name="iAmA" required>
+                    <option value="">Select an option</option>
+                    <option value="Student">Student</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="instituteName">
+                    Institute / Organization Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="instituteName" name="instituteName" type="text" placeholder="Institute / Organization Name" required>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="universityName">
+                    Affiliated University Name (If not a student please write 'NA') <span class="text-red-500">*</span>
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="universityName" name="universityName" type="text" placeholder="University Name or 'NA'" required>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="universityType">
+                    Type of the University <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="universityType" name="universityType" required>
+                    <option value="">Select university type</option>
+                    <option value="Autonomous">Autonomous</option>
+                    <option value="State">State</option>
+                    <option value="Central">Central</option>
+                    <option value="Private">Private</option>
+                    <option value="Deemed">Deemed</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="hodEmail">
+                    Please mention the email id of your HOD/Faculty Member
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="hodEmail" name="hodEmail" type="email" placeholder="HOD/Faculty Email">
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="degree">
+                    Mention the degree to which you are/were enrolled <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="degree" name="degree" required>
+                    <option value="">Select degree</option>
+                    <option value="PhD">PhD</option>
+                    <option value="Masters">Masters</option>
+                    <option value="Bachelors">Bachelors</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="courseStream">
+                    Mention the name and the stream of the course <span class="text-red-500">*</span>
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="courseStream" name="courseStream" type="text" placeholder="e.g. B.E.(Electronics), MBA(Finance)" required>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="studyYear">
+                    Mention the year in which you are studying <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="studyYear" name="studyYear" required>
+                    <option value="">Select year</option>
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                    <option value="Fourth">Fourth</option>
+                    <option value="Graduated">Graduated</option>
+                </select>
+            </div>
+            
+            <!-- Location Information Section -->
+            <h2 class="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">Location Information</h2>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="country">
+                    Country Name <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="country" name="country" required>
+                    <option value="">Select country</option>
+                    <option value="INDIA">INDIA</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="city">
+                        City <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="city" name="city" type="text" placeholder="City" required>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="district">
+                        District <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="district" name="district" type="text" placeholder="District" required>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="state">
+                        State <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="state" name="state" type="text" placeholder="State" required>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="pincode">
+                        Pincode <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="pincode" name="pincode" type="text" placeholder="Pincode" required>
+                </div>
+            </div>
+            
+            <!-- Internship Information Section -->
+            <h2 class="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">Internship Information</h2>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="projectInterest">
+                    Select the name of the project you are interested in <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="projectInterest" name="projectInterest" required>
+                    <option value="">Select project</option>
+                    <option value="OpenFOAM">OpenFOAM</option>
+                    <option value="eSim">eSim</option>
+                    <option value="System Administration">System Administration</option>
+                    <option value="DWSIM">DWSIM</option>
+                    <option value="Artificial Neural Network in Chemical Engineering">Artificial Neural Network in Chemical Engineering</option>
+                    <option value="AI/ML in Chemical Engineering">AI/ML in Chemical Engineering</option>
+                    <option value="OpenModelica">OpenModelica</option>
+                    <option value="FOCAL">FOCAL</option>
+                    <option value="Python">Python</option>
+                    <option value="Osdag">Osdag</option>
+                </select>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="howKnow">
+                    How did you come to know about the Internship? <span class="text-red-500">*</span>
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="howKnow" name="howKnow" required>
+                    <option value="">Select an option</option>
+                    <option value="Email invitation from FOSSEE">Email invitation from FOSSEE</option>
+                    <option value="College">College</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Search Engine">Search Engine (e.g. Google, Yahoo, etc)</option>
+                    <option value="IIT Bombay website">IIT Bombay website</option>
+                    <option value="Internship portals">Internship portals</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="whyParticipate">
+                    Why do you want to participate in the Internship?
+                </label>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="whyParticipate" name="whyParticipate" rows="4" placeholder="Explain your motivation for applying"></textarea>
+            </div>
+            
+    
+      <!-- Submit Button -->
+      <div class="flex items-center justify-center mt-8">
+        <button
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline transition duration-300"
+          type="submit">
+          Submit Application
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- load our external script -->
+  <script src="/form-handler.js" type="module"></script>
+</body>
+</html>
