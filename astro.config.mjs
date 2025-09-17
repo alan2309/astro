@@ -8,6 +8,15 @@ import react from "@astrojs/react";
 export default defineConfig({
   vite: {
   plugins: [tailwindcss()],
+  server: {
+      proxy: {
+        "/api": {
+          target: "http://139.59.10.56:5984",
+          changeOrigin: true,                        // 👈 makes host header match
+          rewrite: (path) => path.replace(/^\/api/, "/fossee"), // 👈 maps /api → /fossee
+        },
+      },
+    },
 },
 
   integrations: [react()],

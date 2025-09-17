@@ -15,9 +15,24 @@ import Update from "../../components/Update.astro";
 	<Update/>
     <Navbar />
     <div class="h-[48vh]">
-      <p class="text-sm px-10 pt-10 pb-5 underline">Please address your queries/suggestions to:</p>
-      <p class="px-10 text-sm text-gray-600">IIT Bombay FOSSEE GIS (NMEICT): An initiative of the National Mission on Education through ICT, Ministry of Education, Government of India</p>
-    </div>
+  <p class="text-sm px-10 pt-10 pb-5 underline">Please address your queries/suggestions to:</p>
+  <p class="px-10 text-sm text-gray-600">
+    IIT Bombay FOSSEE GIS (NMEICT): An initiative of the National Mission on Education through ICT, Ministry of Education, Government of India
+  </p>
+
+  <!-- New line for internship -->
+  <p class="px-10 mt-5 text-sm text-gray-700">
+    Interested in joining us? Apply for an internship here:
+  </p>
+
+  <!-- Apply button -->
+  <div class="px-10 mt-3">
+    <a href="/form" target="_blank" 
+       class="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+      Apply Now
+    </a>
+  </div>
+</div>
     <Footer2/>
   </body>
 </html>
