@@ -1,6 +1,6 @@
 // public/form-handler.js
-const username = "2c7af6e0-01f5-48c8-b54c-3d3216099cbc";        // your COUCHDB_USER
-const password = "5e7d59b5-0de8-415a-a5d2-d3a1b000c754";     // your COUCHDB_PASSWORD
+const username = "fossee-admin";        // your COUCHDB_USER
+const password = "fossee_password";     // your COUCHDB_PASSWORD
 const auth = btoa(`${username}:${password}`);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Form submitted successfully!");
         alert("✅ Application submitted successfully!");
         form.reset();
+          window.location.href = '/'
       }
     } catch (error) {
       console.error("Network Error:", error);
