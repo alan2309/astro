@@ -1,6 +1,6 @@
 // public/form-handler.js
-const username = process.env.db_user;        // your COUCHDB_USER
-const password = process.env.db_password;     // your COUCHDB_PASSWORD
+const username = process.env.db_user;        
+const password = process.env.db_password;     
 const auth = btoa(`${username}:${password}`);
 
 document.addEventListener("DOMContentLoaded", () => {
